@@ -1,6 +1,6 @@
+# This gamecontroller object controls and handle interactions with user
 class GameController
-  def initialize
-  end
+  def initialize; end
 
   # To do:
   # 1) Add colorize into prompts

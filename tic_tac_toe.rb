@@ -3,6 +3,7 @@ require_relative 'game_logic'
 require_relative 'board'
 require 'rubocop'
 require 'colorize'
+require 'pry-byebug'
 
 game_controller = GameController.new
 # game_logic = GameLogic.new()
@@ -16,3 +17,7 @@ players << p1
 puts "\nSetting up player two".colorize(color: :black, background: :white)
 p2 = game_controller.init_player
 players << p2
+
+# set up board
+board = Board.new
+board.display_board(board)
