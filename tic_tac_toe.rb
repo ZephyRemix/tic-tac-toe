@@ -1,6 +1,18 @@
-require 'game_controller.rb'
-require 'game_logic.rb'
-require 'board.rb'
+require_relative 'game_controller'
+require_relative 'game_logic'
+require_relative 'board'
+require 'rubocop'
+require 'colorize'
 
-game_controller = new GameController()
-game_logic = new GameLogic()
+game_controller = GameController.new
+# game_logic = GameLogic.new()
+
+# String.color_samples
+# initialize players
+players = []
+puts "\nSetting up player one".colorize(color: :black, background: :white)
+p1 = game_controller.init_player
+players << p1
+puts "\nSetting up player two".colorize(color: :black, background: :white)
+p2 = game_controller.init_player
+players << p2
