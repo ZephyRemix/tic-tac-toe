@@ -5,11 +5,10 @@ require 'rubocop'
 require 'colorize'
 require 'pry-byebug'
 
-game_controller = GameController.new
-# game_logic = GameLogic.new()
-
 # String.color_samples
 # initialize players
+game_controller = GameController.new
+
 players = []
 puts "\nSetting up player one".colorize(color: :black, background: :white)
 p1 = game_controller.init_player
@@ -28,7 +27,7 @@ starting_player_turn = true
 
 def start_turn(player, board, game_controller)
   puts "#{player.name}'s turn!"
-  next_move = game_controller.get_player_move(player)
+  next_move = game_controller.get_player_move
   player.play_turn(next_move, board)
 end
 
@@ -41,5 +40,5 @@ until game_logic.game_over
     starting_player_turn = true
   end
   board.display_board(board)
-  # game_logic.update_game(board, players, game_controller)
+  game_logic.update_game(players, game_controller)
 end

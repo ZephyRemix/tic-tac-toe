@@ -15,7 +15,7 @@ class GameController
     Player.new(player_init_name, player_init_marker)
   end
 
-  def get_player_move(player)
+  def get_player_move # rubocop:disable Naming/AccessorMethodName
     move = Array.new(2)
 
     puts 'State your next move:'
@@ -25,5 +25,9 @@ class GameController
     move[1] = gets.chomp.to_i
 
     move
+  end
+
+  def announce_winner(player)
+    puts "Congratulations #{player.name}, you owned!".colorize(:green)
   end
 end
