@@ -8,7 +8,7 @@ class Board
     self.content = Array.new(ROW_NUM) { Array.new(COL_NUM, ' ') }
   end
 
-  def display_board(board) # rubocop:disable Metrics/AbcSize
+  def display_board # rubocop:disable Metrics/AbcSize
     puts "\n"
     puts " #{content[0][0]} | #{content[0][1]} | #{content[0][2]} "
     puts '-----------'

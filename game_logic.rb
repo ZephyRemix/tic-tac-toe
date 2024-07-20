@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class handles the state of game and win conditions
 class GameLogic
   attr_accessor :game_over
@@ -17,7 +19,6 @@ class GameLogic
     # end the game if winner found
     return if winner.nil?
 
-    binding.pry
     self.game_over = true
     game_controller.announce_winner(winner)
   end

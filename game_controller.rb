@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'player'
 
 # This gamecontroller object controls and handle interactions with user

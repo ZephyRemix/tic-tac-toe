@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This handles the marker objects
 class Marker
   attr_accessor :move, :representation

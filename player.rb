@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'marker'
 
 # Player class handles moves and plays turn
