@@ -4,15 +4,12 @@
 class GameLogic
   attr_accessor :game_over
 
-  # handles terminating game in tictactoe class
   def initialize
-    self.game_over = false
+    self.game_over = false # handles terminating game in tictactoe class
   end
 
   def update_game(players, game_controller)
     winner = get_winner(players)
-
-    # end the game if winner found
     return if winner.nil?
 
     self.game_over = true
