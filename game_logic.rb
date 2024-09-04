@@ -10,12 +10,8 @@ class GameLogic
   end
 
   def update_game(players, game_controller)
-    winner = nil
+    winner = get_winner(players)
 
-    players.each do |player|
-      winner = win?(player)
-      break if winner
-    end
     # end the game if winner found
     return if winner.nil?
 
@@ -24,6 +20,17 @@ class GameLogic
   end
 
   private
+
+  def get_winner(players)
+    winner = nil
+
+    players.each do |player|
+      winner = win?(player)
+      break if winner
+    end
+
+    winner
+  end
 
   def win?(player)
     win_combination_hash = Hash.new(0)
